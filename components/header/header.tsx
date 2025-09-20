@@ -1,25 +1,28 @@
 import Link from 'next/link';
 
 import HeaderLogo from './headerlogo';
-import NavList from './navList';
+import NavLinks from './navLinks';
 
-import { Circle, HeadsetIcon } from 'lucide-react';
-import { BellAlertIcon, PhotoIcon, SunIcon } from '@heroicons/react/16/solid';
+import { ChevronDown, HeadsetIcon, SunIcon } from 'lucide-react';
+import { BellAlertIcon, PhotoIcon } from '@heroicons/react/24/solid';
 
 function Header() {
   return (
-    <header className="flex items-center justify-between">
-      <div className="flex items-center gap-x-4">
+    <header className="flex items-center justify-between bg-red-500">
+      <div className="flex items-center gap-x-8 bg-yellow-200">
         <HeaderLogo />
-        <div className="flex items-center gap-x-2">
-          <Circle className="size-6 text-red-500 fill-blue-500" />
-          <select className="border outline-0 border-slate-100 bg-transparent rounded-md p-1.5 text-sm">
-            <option value="en">Lorem ipsum</option>
-          </select>
+        <div className="flex items-center gap-x-4">
+          <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
+          <div className="flex gap-x-2.5">
+            <span>Loremipsumdolor</span>
+            <ChevronDown />
+          </div>
         </div>
       </div>
-      <NavList />
-      <div>
+
+      <NavLinks />
+
+      <div className="flex items-center gap-x-4">
         <ul className="flex items-center justify-between gap-x-4">
           <li>
             <Link
@@ -47,10 +50,8 @@ function Header() {
               <SunIcon className="size-6" />
             </button>
           </li>
-          <li>
-            <Circle className="size-6" />
-          </li>
         </ul>
+        <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
       </div>
     </header>
   );

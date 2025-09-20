@@ -1,11 +1,12 @@
-import Header from '@/components/header/header';
+import Carousel from '@/components/carousel/carousel';
+import Generate from '@/components/generate';
 
 function HomePage() {
   return (
-    <main>
-      <Header />
-      <div className="">This is the homepage</div>
-    </main>
+    <>
+      {/* <Carousel /> */}
+      <Generate />
+    </>
   );
 }
 

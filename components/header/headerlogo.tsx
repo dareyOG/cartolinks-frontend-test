@@ -1,9 +1,5 @@
-import Image from 'next/image';
-
 function HeaderLogo() {
-  return (
-    <Image src="/globe.svg" alt="Cartolinks Logo" width={20} height={20} />
-  );
+  return <h1 className="font-extrabold text-3xl">k</h1>;
 }
 
 export default HeaderLogo;
