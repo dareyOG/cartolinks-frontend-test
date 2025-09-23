@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
+
+import Footer from '@/components/footer';
+
 import './globals.css';
-import Header from '@/components/header/header';
+import Header from '@/components/header';
 
 const roboto = Roboto({
   weight: '400',
@@ -22,11 +25,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // <ThemeProvider>
     <html lang="en">
-      <body className={`${roboto.className} antialiased px-6 py-3`}>
+      <body className={`${roboto.className} antialiased`}>
         <Header />
-        <main className="mt-16">{children}</main>
+        <main className="px-6 flex flex-col gap-y-10">{children}</main>
+        <Footer />
       </body>
     </html>
+    // </ThemeProvider>
   );
 }

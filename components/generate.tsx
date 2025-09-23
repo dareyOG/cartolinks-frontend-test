@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react';
 import Button from './button';
+
 import { FaChevronDown } from 'react-icons/fa';
 import {
   HiMicrophone,
@@ -94,8 +95,8 @@ function Generate() {
                     {generateItem.icon}
                   </div>
                 </div>
-                <div className="">
-                  <div className="">
+                <div>
+                  <div>
                     <div className="flex items-center gap-x-2.5 font-semibold capitalize">
                       <h3>{generateItem.title}</h3>
                       {generateItem.new ? (

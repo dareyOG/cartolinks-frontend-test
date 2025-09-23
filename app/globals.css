@@ -1,8 +1,15 @@
 @import 'tailwindcss';
 
+/* Light mode (default) */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+/* Dark mode - triggered by .dark class */
+.dark {
+  --background: #171717;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -11,17 +18,15 @@
   --font-sans: var(--font-roboto);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-body {
-  /* background: var(--background); */
-  /* color: var(--foreground); */
-  background: #ffffff;
-  color: #171717;
-  font-family: var(--font-sans), sans-serif;
+/* Optional: Add smooth transitions for all elements */
+* {
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }

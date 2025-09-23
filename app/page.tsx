@@ -1,11 +1,13 @@
-import Carousel from '@/components/carousel/carousel';
+import Carousel from '@/components/carousel';
+import Gallery from '@/components/gallery';
 import Generate from '@/components/generate';
 
 function HomePage() {
   return (
     <>
-      {/* <Carousel /> */}
+      <Carousel />
       <Generate />
+      <Gallery />
     </>
   );
 }
