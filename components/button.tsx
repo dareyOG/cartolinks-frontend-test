@@ -3,7 +3,7 @@
 import { ReactNode } from 'react';
 
 type ButtonProp = {
-  children: ReactNode;
+  children?: ReactNode;
   handleClick: () => void;
   className: string;
 };
