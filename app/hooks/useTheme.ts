@@ -7,7 +7,7 @@ export default function useTheme() {
   const context = useContext(ThemeContext);
 
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeContextProvider');
+    throw new Error('context must be used within a ThemeContextProvider scope');
   }
   return context;
 }
